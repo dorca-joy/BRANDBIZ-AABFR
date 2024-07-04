@@ -5,22 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/CSS/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
   <title>Brandbiz</title>
 </head>
 
 <body>
-  <?php
-  session_start();
-  if (isset($_SESSION['username'])) {
-    echo "<p>Welcome, " . htmlspecialchars($_SESSION['username']) . "!</p>";
-  }
-  ?>
   <header class="header">
     <nav>
       <div class="nav__bar">
         <div class="logo">
-          <a href="#"><img src="assets/logo.jpg" alt="logo" /></a>
+          <a href="#"><img src="/assets/logo.jpg" alt="logo" /></a>
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
@@ -45,7 +39,7 @@
   <hr>
   <section class="section__container about__container" id="about">
     <div class="about__image">
-      <img src="assets/about.jpg" alt="about" />
+      <img src="/assets/about.jpg" alt="about" />
     </div>
     <div class="about__content">
       <p class="section__subheader">ABOUT US</p>
