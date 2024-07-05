@@ -14,22 +14,23 @@ body {
 }
 
 /* Form Container */
-.form-container {
+.container {
   background: #fff;
-  padding: 20px;
+  padding: 15px; /* Reduced padding */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
+  width: 90%; /* Adjusted width */
+  max-width: 350px; /* Adjusted max-width */
+  box-sizing: border-box;
 }
 
-.form-container h1 {
+.container h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px; /* Reduced margin */
   color: var(--primary-color);
 }
 
-.form-container p {
+.container p {
   text-align: center;
   color: var(--text-light);
 }
@@ -39,8 +40,8 @@ input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0 20px 0;
+  padding: 8px; /* Reduced padding */
+  margin: 8px 0 16px 0; /* Adjusted margin */
   display: inline-block;
   border: 1px solid var(--primary-color);
   border-radius: 5px;
@@ -57,7 +58,7 @@ input[type="password"]:focus {
 button {
   background-color: var(--primary-color);
   color: white;
-  padding: 10px 20px;
+  padding: 10px; /* Adjusted padding */
   margin: 10px 0;
   border: none;
   border-radius: 5px;
@@ -93,7 +94,7 @@ a:hover {
 
 /* Responsive Design */
 @media screen and (max-width: 600px) {
-  .form-container {
-    padding: 10px;
+  .container {
+    padding: 10px; /* Reduced padding for smaller screens */
   }
 }
