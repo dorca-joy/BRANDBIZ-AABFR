@@ -1,3 +1,29 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const cardContainer = document.querySelector('.card-container');
+  const leftNav = document.querySelector('.left-nav');
+  const rightNav = document.querySelector('.right-nav');
+  let scrollAmount = 0;
+
+  const cardWidth = document.querySelector('.card').offsetWidth + 20; // 20 for margin
+
+  leftNav.addEventListener('click', () => {
+      cardContainer.scrollBy({
+          top: 0,
+          left: -cardWidth,
+          behavior: 'smooth'
+      });
+      scrollAmount -= cardWidth;
+  });
+
+  rightNav.addEventListener('click', () => {
+      cardContainer.scrollBy({
+          top: 0,
+          left: cardWidth,
+          behavior: 'smooth'
+      });
+      scrollAmount += cardWidth;
+  });
+});
 const menuBtn = document.getElementById("menu-btn");
 const navLinks = document.getElementById("nav-links");
 const menuBtnIcon = menuBtn.querySelector("i");
@@ -19,6 +45,7 @@ const scrollRevealOption = {
   origin: "bottom",
   duration: 1000,
 };
+
 
 // header container
 ScrollReveal().reveal(".header__container p", {
@@ -57,7 +84,7 @@ ScrollReveal().reveal(".about__btn", {
 });
 
 // room container
-ScrollReveal().reveal(".room__card", {
+ScrollReveal().reveal(".services", {
   ...scrollRevealOption,
   interval: 500,
 });
