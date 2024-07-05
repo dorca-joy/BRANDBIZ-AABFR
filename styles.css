@@ -101,7 +101,7 @@ body {
 }
 
 .content-below-nav {
-  background-image: url("/assets/bg.jpg");
+  background-image: url(/assets/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   max-height: 100vh;
@@ -249,24 +249,24 @@ nav {
   border-radius: 5px;
 }
 
-.room__grid {
+.service__grid {
   margin-top: 4rem;
   display: grid;
   gap: 1rem;
 }
 
-.room__card {
+.service__card {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.room__card__image {
+.service__card__image {
   position: relative;
   isolation: isolate;
 }
 
-.room__card__icons {
+.service__card__icons {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
@@ -279,7 +279,7 @@ nav {
   z-index: 1;
 }
 
-.room__card__icons span {
+.service__card__icons span {
   display: inline-block;
   padding: 2px 8px;
   font-size: 1.5rem;
@@ -289,42 +289,42 @@ nav {
   cursor: pointer;
 }
 
-.room__card__icons span:nth-child(1) {
+.service__card__icons span:nth-child(1) {
   color: #f472b6;
 }
 
-.room__card__icons span:nth-child(2) {
+.service__card__icons span:nth-child(2) {
   color: #c084fc;
 }
 
-.room__card__icons span:nth-child(3) {
+.service__card__icons span:nth-child(3) {
   color: #60a5fa;
 }
 
-.room__card__details {
+.service__card__details {
   padding: 1rem;
 }
 
-.room__card h4 {
+.service__card h4 {
   margin-bottom: 0.5rem;
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--text-dark);
 }
 
-.room__card p {
+.service__card p {
   margin-bottom: 0.5rem;
   color: var(--text-light);
 }
 
-.room__card h5 {
+.service__card h5 {
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 500;
   color: var(--text-light);
 }
 
-.room__card h5 span {
+.service__card h5 span {
   font-size: 1.1rem;
   color: var(--text-dark);
 }
@@ -424,6 +424,12 @@ nav {
   margin-inline: auto;
 }
 
+.clientelle{
+  height: 50vh;
+  width: 150vh;
+  margin-left: 15%;
+}
+
 .explore__bg {
   margin-top: 4rem;
   padding-block: 3rem;
@@ -471,6 +477,7 @@ nav {
 }
 
 .footer {
+  /* background:linear-gradient(to bottom, #fff,#fff,#67530c, #000000); */
   background-color: var(--text-dark);
 }
 
@@ -483,11 +490,14 @@ nav {
   margin-block: 2rem;
 }
 
+.footer_section_description{
+  color: #000000;
+}
 .footer__col h4 {
   margin-bottom: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--white);
+  color: var(--primary-color);
 }
 
 .footer__links {
@@ -497,12 +507,12 @@ nav {
 }
 
 .footer__links a {
-  color: var(--text-light);
+  color: #fff;
   transition: 0.3s;
 }
 
 .footer__links a:hover {
-  color: var(--white);
+  color: var(--primary-color);
 }
 
 .footer__socials {
@@ -525,9 +535,85 @@ nav {
 
 .footer__bar {
   padding: 1rem;
+  margin: 0%;
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: #ffff;
   text-align: center;
+}
+.carousel-container {
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+}
+
+.card-container {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card {
+  min-width: 300px;
+  margin: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin-top: 0;
+}
+
+.card-content p {
+  color: #666;
+}
+
+.card-content a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff7e5f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.left-nav {
+  left: 10px;
+}
+
+.right-nav {
+  right: 10px;
+}
+
+.nav:hover {
+  background: rgba(255, 255, 255, 1);
 }
 
 @media (width > 576px) {

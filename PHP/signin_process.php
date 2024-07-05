@@ -28,8 +28,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Verify the password
             if (password_verify($password, $user['password'])) {
-                $_SESSION['username'] = $user['name']; // Assuming 'name' is the column with the user's name
-                header("Location: index.php");
+                $_SESSION['username'] = $user['name'];
+                echo "welcome to brandbiz" // Assuming 'name' is the column with the user's name
+                header("Location: index.html");
                 exit();
             } else {
                 echo "Invalid email or password";
